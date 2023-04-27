@@ -186,4 +186,4 @@
                 componentHandler.upgradeElement(dropdown.querySelector('ul'));
             });
         }
-      };
+    };
