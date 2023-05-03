@@ -4,19 +4,23 @@
 // Created on: Sep 2020
 // This file contains the JS functions for index.html
 
-'use strict'
-const randomNumber = Math.floor(Math.random() * 6) + 1  // returns a random integer from 1 to 6 into variable "randomNumber" 
+const randomNumber = Math.floor(Math.random() * 6) + 1;
+
 /**
- * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
+ * This function updates the slider value.
  */
+function updateSliderValue(valueFromSlider) { 
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
 
-function myButtonClicked() {
-  // input
-  const numberGuessed = parseInt(document.getElementById('guessed-number').value)
+// process
+if (valueFromSlider == randomNumber) {
+  document.getElementById("answer").innerHTML =
+  "The answer was, " + randomNumber + "!" + You got it! Good job."
+}
 
-  // process
-  //pass
-
-  // output
-  document.getElementById('answer').innerHTML = numberGuessed
+// block of code to be executed if condition1 is true
+if (valueFromSlider != randomNumber) {
+document.getElementById("answer").innerHTML =
+"The answer was, " + randomNumber + "!" + "Nice guess, but try again."
 }
